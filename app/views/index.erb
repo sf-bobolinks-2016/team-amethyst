@@ -1,7 +1,8 @@
 <div class="container">
 	<% @container.each do |post| %>
     <% question = post.question %>
-    <h2><%= question.content %> <span class="username">– <%= question.questioner.username %></span></h2>
+    <h2><a href="questions/<%= question.id %>"><%= question.content %>
+    </a> <span class="username">– <%= question.questioner.username %></span></h2>
       <% question.comments.each do |comment| %>
       <p class="comment"><%= comment.content %> <span class="username">– <%= comment.commenter.username %></span></p>
       <% end %>
