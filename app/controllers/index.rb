@@ -1,4 +1,4 @@
 get '/' do
-  @container = Post.all
+  @container = Post.all.order(created_at: :desc)
 	erb :index
 end

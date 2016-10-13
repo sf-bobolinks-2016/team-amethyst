@@ -3,13 +3,15 @@
     <% question = post.question %>
     <h2><%= question.content %> – <%= question.questioner.username %></h2>
       <% question.comments.each do |comment| %>
-      <p>Comment: <%= comment.content %> – <%= comment.commenter.username %></p>
+      <p class="comment">Comment: <%= comment.content %> – <%= comment.commenter.username %></p>
       <% end %>
       <% question.answers.each do |answer| %>
-        <p>Answer: <%= answer.content %>  – <%= answer.responder.username %></p>
+        <p class="answer">Answer: <%= answer.content %>  – <%= answer.responder.username %></p>
+         <ul>
           <% answer.comments.each do |ans_com| %>
-            <p>Comment to answer: <%= ans_com.content %> – <%= ans_com.commenter.username %></p>
+            <li>Comment to answer: <%= ans_com.content %> – <%= ans_com.commenter.username %><li>
         <% end %>
+         </ul>
       <% end %>
     <% end %>
 
