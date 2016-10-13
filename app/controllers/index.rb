@@ -6,5 +6,10 @@ end
 get '/questions/:id' do
   id = params[:id]
   @question = Question.find(id)
-  erb :"questions/show"
+  if request.xhr?
+    page = erb :"questions/_content", layout: false, locals: {question: @question}
+    json id: @question.id, page: page
+  else
+    erb :"questions/show"
+  end
 end

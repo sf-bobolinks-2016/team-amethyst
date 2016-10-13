@@ -104,6 +104,7 @@ DEPENDENCIES
   factory_girl
   faker
   haml
+  json
   pg
   rack-test
   rake
