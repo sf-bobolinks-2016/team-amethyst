@@ -27,6 +27,5 @@ end
 
 
 10.times do
-  Post.create!()
-
+  Post.create!(question_id: (1..10).to_a.sample)
 end
