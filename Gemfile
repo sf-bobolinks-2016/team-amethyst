@@ -14,8 +14,8 @@ gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
-gem 'faker'
 gem 'shotgun'
+gem 'bcrypt'
 
 gem 'haml'
 
