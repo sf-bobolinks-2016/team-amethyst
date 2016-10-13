@@ -1,5 +1,5 @@
 get '/' do
-  @container = Post.all.order(created_at: :desc)
+  @container = Post.all.order(id: :desc)
 	erb :index
 end
 
