@@ -1,3 +1,16 @@
 <div class="container">
-	<h1>HELLO DBC!!!</h1>
+	<% @container.each do |post| %>
+    <% question = post.question %>
+    <h2><%= question.content %> – <%= question.questioner.username %></h2>
+      <% question.comments.each do |comment| %>
+      <p>Comment: <%= comment.content %> – <%= comment.commenter.username %></p>
+      <% end %>
+      <% question.answers.each do |answer| %>
+        <p>Answer: <%= answer.content %>  – <%= answer.responder.username %></p>
+          <% answer.comments.each do |ans_com| %>
+            <p>Comment to answer: <%= ans_com.content %> – <%= ans_com.commenter.username %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+
 </div>
