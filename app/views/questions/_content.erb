@@ -1,11 +1,4 @@
-<div class="container">
-	<% @container.each do |post| %>
-    <% question = post.question %>
-    <h2><a class="question" href="questions/<%= question.id %>"><%= question.content %>
-    </a> <span class="username">– <%= question.questioner.username %></span></h2>
-      <div id="answer-holder<%= question.id %>" class="inactive">
-      </div>
-<!--       <% question.comments.each do |comment| %>
+<% question.comments.each do |comment| %>
       <p class="comment"><%= comment.content %> <span class="username">– <%= comment.commenter.username %></span></p>
       <% end %>
       <% question.answers.each do |answer| %>
@@ -15,7 +8,4 @@
             <li class="comment"><%= ans_com.content %> <span class="username">– <%= ans_com.commenter.username %></span><li>
         <% end %>
          </ul>
-      <% end %> -->
-    <% end %>
-
-</div>
+<% end %>

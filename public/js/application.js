@@ -1,7 +1,19 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('.question').on('click', function(event){
+    event.preventDefault();
+    var url = $(this).attr('href');
+    var clickedQuestion = $(this)
+    var reply = $.ajax({
+      url: url,
+      method: 'get'
+      })
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    reply.done(function(reply){
+      console.log("Success!")
+      console.log(reply)
+      console.log("this in the second scope", this)
+      $('#answer-holder' + reply.id).empty().append(reply.page).toggleClass('inactive').toggleClass('active')
+    })
+
+  })
 });

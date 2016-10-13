@@ -9,7 +9,7 @@ end
 
 10.times do
   Question.create( user_id: (rand(10) + 1),
-                    content: Faker::Lorem.characters(10))
+                    content: Faker::Lorem.sentence(1))
 end
 
 10.times do
