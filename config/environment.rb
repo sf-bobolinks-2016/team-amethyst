@@ -5,7 +5,7 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
-require 'rubygems'  
+require 'rubygems'
 
 require 'uri'
 require 'pathname'
@@ -14,6 +14,7 @@ require 'pg'
 require 'active_record'
 require 'logger'
 
+require 'faker'
 require 'sinatra'
 require "sinatra/reloader" if development?
 require "sinatra/json"
@@ -30,12 +31,12 @@ APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
 configure do
-  
+
   # ------------------------------------------------
   # If you want to share this with the DBC network.
   # ------------------------------------------------
   # Get your ip by running this in the console:
-  
+
   # $ ifconfig en0 inet
 
   # You'll see this prompt:
