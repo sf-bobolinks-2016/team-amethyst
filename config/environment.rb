@@ -21,7 +21,7 @@ require "sinatra/json"
 
 # CORS
 require 'sinatra/cross_origin'
-require "bcrypt"
+require 'bcrypt'
 require 'erb'
 require 'haml'
 
