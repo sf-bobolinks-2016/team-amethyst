@@ -12,11 +12,8 @@ $(document).ready(function() {
       console.log("Success!")
       console.log(reply)
       console.log("this in the second scope", this)
-      $('#question-holder' + reply.id).append(reply.page)
+      $('#answer-holder' + reply.id).empty().append(reply.page).toggleClass('inactive').toggleClass('active')
     })
-
-
-
 
   })
 });
