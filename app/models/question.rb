@@ -1,3 +1,5 @@
 class Question < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :questioner, class_name: 'User'
+  has_many :comments, as: :commentable
+  has_one :post
 end
