@@ -1,0 +1,15 @@
+.comment {
+  font-style: italic;
+}
+
+.username {
+  font-family: "Courier New"
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}

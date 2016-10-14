@@ -14,9 +14,9 @@ gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
-
 gem 'shotgun'
-
+gem 'bcrypt'
+gem 'json'
 gem 'haml'
 
 group :test do
